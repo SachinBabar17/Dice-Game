@@ -19,25 +19,27 @@ document.querySelectorAll("img")[1].setAttribute("src", ("images/" + "dice" + (M
 */
 
 
-//Time delay after refreshing browser
-var delayInMilliseconds = 500; // 0.5 second
-setTimeout(function() {
-    
-    // player1 is greater than player2
-    if (randomNumber1>randomNumber2)
-    {
-        document.querySelector("h1").innerHTML="🚩Play1 is wins!";
-    }
-    // player1 is greater than player2
-    else if(randomNumber2>randomNumber1)
-    {
-        document.querySelector("h1").innerHTML="Play2 is wins!🚩";
-    }
-    // player1 iand player2 are equal
-    else{
-        document.querySelector("h1").innerHTML="Draw!";
-    }
-  
-}, delayInMilliseconds);
 
+
+// player1 is greater than player2
+if (randomNumber1>randomNumber2)
+{
+    document.querySelector("h1").innerHTML="🚩Play1 is wins!";
+}
+
+// player1 is greater than player2
+else if(randomNumber2>randomNumber1)
+{
+    document.querySelector("h1").innerHTML="Play2 is wins!🚩";
+}
+
+// player1 iand player2 are equal
+else{
+    document.querySelector("h1").innerHTML="Draw!";
+}
+
+// adding time delay To play agin
+setTimeout(function(){
+    document.querySelector("h1").innerHTML="Refresh me...!";
+}, 4000);  //4 sec
 
